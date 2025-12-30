@@ -1,0 +1,32 @@
+.driver-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.driver-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.driver-card h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.driver-card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.driver-card button:hover {
+  background-color: #0056b3;
+}

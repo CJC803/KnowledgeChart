@@ -1,0 +1,27 @@
+.staffing-panel {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.staffing-panel h3 {
+  margin-top: 0;
+}
+
+.staffing-panel ul {
+  padding-left: 20px;
+}
+
+.staffing-panel button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.staffing-panel button:hover {
+  background-color: #218838;
+}

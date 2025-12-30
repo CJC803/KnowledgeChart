@@ -1,0 +1,28 @@
+<div class="data-loader">
+  <h3>Load Mock Data</h3>
+
+  <input type="file" accept=".json" (change)="onRoutesUpload($event)" />
+  <input type="file" accept=".json" (change)="onDriversUpload($event)" />
+
+  <button (click)="loadData()">Load Data</button>
+</div>
+
+<hr />
+
+<div class="kc-shell">
+  <div class="kc-header">
+    <h2 class="kc-title">Knowledge Charts</h2>
+  </div>
+
+  <nav class="kc-tabs">
+    <a routerLink="routes" routerLinkActive="active">Routes</a>
+    <a routerLink="drivers" routerLinkActive="active">Drivers</a>
+    <a routerLink="comparison" routerLinkActive="active">Comparison</a>
+  </nav>
+
+  <div class="kc-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+

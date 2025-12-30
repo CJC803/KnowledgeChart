@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Jones, Theodore",
+    "seniority": 14,
+    "routes": ["28K", "14B"],
+    "spm": 7.1,
+    "ndpph": 17.4,
+    "ovUn": 0.3
+  },
+  {
+    "name": "Harris, Parker",
+    "seniority": 20,
+    "routes": ["28K"],
+    "spm": 6.9,
+    "ndpph": 16.8,
+    "ovUn": -0.1
+  },
+  {
+    "name": "Nguyen, Alex",
+    "seniority": 6,
+    "routes": ["33C"],
+    "spm": 7.5,
+    "ndpph": 18.2,
+    "ovUn": 0.6
+  }
+]
+

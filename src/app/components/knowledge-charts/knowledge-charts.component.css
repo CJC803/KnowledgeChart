@@ -1,0 +1,9 @@
+.kc-shell { padding: 16px; }
+.kc-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.kc-title { margin: 0; font-size: 22px; font-weight: 700; }
+
+.kc-tabs { display: flex; gap: 10px; border-bottom: 1px solid #e5e5e5; padding-bottom: 10px; }
+.kc-tabs a { padding: 8px 12px; border-radius: 10px; text-decoration: none; color: #222; }
+.kc-tabs a.active { background: #111; color: #fff; }
+
+.kc-content { padding-top: 16px; }

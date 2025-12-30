@@ -1,0 +1,36 @@
+[
+  {
+    "route": "28K",
+    "avgSPM": 6.8,
+    "avgNDPPH": 15.4,
+    "avgMiles": 65,
+    "avgStops": 100,
+    "ovUn": 0.3,
+    "sporh": 14.6,
+    "planDay": 7.2,
+    "paidDay": 7.4
+  },
+  {
+    "route": "14B",
+    "avgSPM": 7.2,
+    "avgNDPPH": 16.1,
+    "avgMiles": 62,
+    "avgStops": 95,
+    "ovUn": -0.1,
+    "sporh": 15.2,
+    "planDay": 7.3,
+    "paidDay": 7.6
+  },
+  {
+    "route": "33C",
+    "avgSPM": 6.5,
+    "avgNDPPH": 14.9,
+    "avgMiles": 70,
+    "avgStops": 110,
+    "ovUn": 0.6,
+    "sporh": 13.9,
+    "planDay": 7.1,
+    "paidDay": 7.8
+  }
+]
+
