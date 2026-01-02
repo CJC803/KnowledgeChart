@@ -1,17 +1,20 @@
 <div class="data-loader">
-  <h3>Load Mock Data</h3>
+  <h3>Load Data</h3>
 
-  <input type="file" accept=".json" (change)="onRoutesUpload($event)" />
-  <input type="file" accept=".json" (change)="onDriversUpload($event)" />
+  <div class="data-actions">
+    <button (click)="loadSampleData()">
+      Load Sample Data
+    </button>
+  </div>
 
-  <button (click)="loadData()">Load Data</button>
+  <hr />
+
+  <div class="data-actions">
+    <input type="file" accept=".json" (change)="onRoutesUpload($event)" />
+    <input type="file" accept=".json" (change)="onDriversUpload($event)" />
+    <button (click)="loadData()">Load Uploaded Data</button>
+  </div>
 </div>
-
-<button (click)="loadSampleData()">
-  Load Sample Data
-</button>
-
-<hr />
 
 <div class="kc-shell">
   <div class="kc-header">
