@@ -1,27 +1,379 @@
 [
   {
-    "name": "Jones, Theodore",
-    "seniority": 14,
-    "routes": ["28K", "14B"],
-    "spm": 7.1,
-    "ndpph": 17.4,
+    "name": "Adams, Ava",
+    "seniority": 26,
+    "routes": [
+      "179J",
+      "221V"
+    ],
+    "spm": 6.8,
+    "ndpph": 16.3,
     "ovUn": 0.3
   },
   {
-    "name": "Harris, Parker",
-    "seniority": 20,
-    "routes": ["28K"],
-    "spm": 6.9,
-    "ndpph": 16.8,
+    "name": "Allen, Cameron",
+    "seniority": 6,
+    "routes": [
+      "190S",
+      "367K"
+    ],
+    "spm": 7.0,
+    "ndpph": 14.3,
+    "ovUn": 0.2
+  },
+  {
+    "name": "Anderson, Amelia",
+    "seniority": 30,
+    "routes": [
+      "243W",
+      "256W"
+    ],
+    "spm": 6.6,
+    "ndpph": 15.2,
+    "ovUn": 0.3
+  },
+  {
+    "name": "Baker, Elijah",
+    "seniority": 4,
+    "routes": [
+      "105Q",
+      "337B"
+    ],
+    "spm": 6.7,
+    "ndpph": 16.1,
+    "ovUn": -0.2
+  },
+  {
+    "name": "Brown, Derek",
+    "seniority": 25,
+    "routes": [
+      "229H",
+      "239K"
+    ],
+    "spm": 6.1,
+    "ndpph": 18.7,
+    "ovUn": 0.2
+  },
+  {
+    "name": "Carter, Priya",
+    "seniority": 11,
+    "routes": [
+      "323D"
+    ],
+    "spm": 6.8,
+    "ndpph": 18.2,
+    "ovUn": 0.4
+  },
+  {
+    "name": "Clark, Quinn",
+    "seniority": 22,
+    "routes": [
+      "268R"
+    ],
+    "spm": 7.0,
+    "ndpph": 15.8,
+    "ovUn": -0.3
+  },
+  {
+    "name": "Davis, Logan",
+    "seniority": 8,
+    "routes": [
+      "303X"
+    ],
+    "spm": 6.5,
+    "ndpph": 14.0,
+    "ovUn": -0.2
+  },
+  {
+    "name": "Garcia, Harper",
+    "seniority": 27,
+    "routes": [
+      "156P",
+      "382V"
+    ],
+    "spm": 6.5,
+    "ndpph": 18.3,
+    "ovUn": 0.4
+  },
+  {
+    "name": "Gonzalez, Nina",
+    "seniority": 10,
+    "routes": [
+      "281F",
+      "288N"
+    ],
+    "spm": 7.3,
+    "ndpph": 14.6,
+    "ovUn": 0.3
+  },
+  {
+    "name": "Green, Reese",
+    "seniority": 7,
+    "routes": [
+      "241L"
+    ],
+    "spm": 7.7,
+    "ndpph": 14.3,
+    "ovUn": -0.3
+  },
+  {
+    "name": "Hall, Jordan",
+    "seniority": 17,
+    "routes": [
+      "263E",
+      "367K"
+    ],
+    "spm": 7.1,
+    "ndpph": 16.2,
+    "ovUn": 0.1
+  },
+  {
+    "name": "Harris, Mateo",
+    "seniority": 19,
+    "routes": [
+      "382V"
+    ],
+    "spm": 7.3,
+    "ndpph": 17.6,
+    "ovUn": 0.5
+  },
+  {
+    "name": "Hernandez, Jasmine",
+    "seniority": 28,
+    "routes": [
+      "231H"
+    ],
+    "spm": 7.9,
+    "ndpph": 14.6,
+    "ovUn": 0.2
+  },
+  {
+    "name": "Hill, Brooks",
+    "seniority": 12,
+    "routes": [
+      "141B"
+    ],
+    "spm": 7.6,
+    "ndpph": 14.1,
     "ovUn": -0.1
   },
   {
-    "name": "Nguyen, Alex",
-    "seniority": 6,
-    "routes": ["33C"],
-    "spm": 7.5,
+    "name": "Jackson, Olivia",
+    "seniority": 16,
+    "routes": [
+      "116A",
+      "209M"
+    ],
+    "spm": 6.3,
+    "ndpph": 17.7,
+    "ovUn": 0.4
+  },
+  {
+    "name": "Johnson, Kendall",
+    "seniority": 3,
+    "routes": [
+      "318C",
+      "337B"
+    ],
+    "spm": 7.0,
+    "ndpph": 15.1,
+    "ovUn": 0.2
+  },
+  {
+    "name": "Jones, Theodore",
+    "seniority": 14,
+    "routes": [
+      "174F",
+      "239K"
+    ],
+    "spm": 7.7,
+    "ndpph": 17.2,
+    "ovUn": 0.2
+  },
+  {
+    "name": "King, Serena",
+    "seniority": 9,
+    "routes": [
+      "257M",
+      "288N"
+    ],
+    "spm": 6.8,
+    "ndpph": 14.3,
+    "ovUn": 0.4
+  },
+  {
+    "name": "Lee, Zoe",
+    "seniority": 13,
+    "routes": [
+      "251V"
+    ],
+    "spm": 7.2,
+    "ndpph": 13.1,
+    "ovUn": 0.3
+  },
+  {
+    "name": "Lewis, Aiden",
+    "seniority": 24,
+    "routes": [
+      "243W"
+    ],
+    "spm": 6.3,
+    "ndpph": 15.4,
+    "ovUn": 0.5
+  },
+  {
+    "name": "Lopez, Anika",
+    "seniority": 15,
+    "routes": [
+      "186K"
+    ],
+    "spm": 7.6,
+    "ndpph": 13.9,
+    "ovUn": -0.2
+  },
+  {
+    "name": "Martin, Liam",
+    "seniority": 2,
+    "routes": [
+      "105Q",
+      "221V"
+    ],
+    "spm": 6.4,
+    "ndpph": 15.6,
+    "ovUn": -0.4
+  },
+  {
+    "name": "Martinez, Sophia",
+    "seniority": 20,
+    "routes": [
+      "190S",
+      "209M"
+    ],
+    "spm": 6.5,
+    "ndpph": 15.7,
+    "ovUn": 0.2
+  },
+  {
+    "name": "Miller, Riley",
+    "seniority": 29,
+    "routes": [
+      "156P",
+      "268R"
+    ],
+    "spm": 6.6,
+    "ndpph": 16.8,
+    "ovUn": 0.0
+  },
+  {
+    "name": "Mitchell, Parker",
+    "seniority": 18,
+    "routes": [
+      "179J",
+      "263E"
+    ],
+    "spm": 7.2,
+    "ndpph": 16.9,
+    "ovUn": 0.4
+  },
+  {
+    "name": "Moore, Taylor",
+    "seniority": 5,
+    "routes": [
+      "174F",
+      "382V"
+    ],
+    "spm": 7.7,
+    "ndpph": 17.8,
+    "ovUn": 0.3
+  },
+  {
+    "name": "Nelson, Hannah",
+    "seniority": 23,
+    "routes": [
+      "241L",
+      "303X"
+    ],
+    "spm": 7.1,
+    "ndpph": 14.4,
+    "ovUn": -0.2
+  },
+  {
+    "name": "Perez, Diego",
+    "seniority": 1,
+    "routes": [
+      "116A",
+      "323D"
+    ],
+    "spm": 6.5,
     "ndpph": 18.2,
+    "ovUn": 0.2
+  },
+  {
+    "name": "Roberts, Jules",
+    "seniority": 21,
+    "routes": [
+      "256W",
+      "281F"
+    ],
+    "spm": 7.2,
+    "ndpph": 14.8,
+    "ovUn": 0.1
+  },
+  {
+    "name": "Robinson, Mia",
+    "seniority": 27,
+    "routes": [
+      "229H",
+      "371A",
+      "382V",
+      "105Q",
+      "243W",
+      "318C",
+      "323D"
+    ],
+    "spm": 4.9,
+    "ndpph": 11.2,
+    "ovUn": 0.8
+  },
+  {
+    "name": "Rodriguez, Noah",
+    "seniority": 12,
+    "routes": [
+      "371A"
+    ],
+    "spm": 6.1,
+    "ndpph": 10.6,
+    "ovUn": 1.1
+  },
+  {
+    "name": "Scott, Jaden",
+    "seniority": 19,
+    "routes": [
+      "257M"
+    ],
+    "spm": 6.8,
+    "ndpph": 13.5,
     "ovUn": 0.6
+  },
+  {
+    "name": "Smith, Ethan",
+    "seniority": 6,
+    "routes": [
+      "141B",
+      "186K"
+    ],
+    "spm": 7.3,
+    "ndpph": 14.5,
+    "ovUn": -0.2
+  },
+  {
+    "name": "Taylor, Caleb",
+    "seniority": 8,
+    "routes": [
+      "318C"
+    ],
+    "spm": 7.3,
+    "ndpph": 14.5,
+    "ovUn": 0.4
   }
 ]
-
