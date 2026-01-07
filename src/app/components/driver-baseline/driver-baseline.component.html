@@ -7,19 +7,12 @@
 <h2>Driver Baseline Overview</h2>
 
 <div class="driver-cards">
-  <div class="driver-card">
-    <h3>Jones, Theodore</h3>
-    <p>Seniority: 14 yrs</p>
-    <p>Routes: 28K, 14B</p>
-    <p>KPIs: SPM: 7.1 | NDPPH: 17.4 | Ov/Un: +0.3</p>
+  <div class="driver-card" *ngFor="let driver of drivers">
+    <h3>{{ driver.name }}</h3>
+    <p>Seniority: {{ driver.seniority }} yrs</p>
+    <p>Routes: {{ driver.routes }}</p>
+    <p>KPIs: SPM: {{ driver.avgSPM }} | NDPPH: {{ driver.avgNDPPH }} | Ov/Un: {{ driver.ovUn }}</p>
     <button>View Details</button>
-  </div>
-
-  <div class="driver-card">
-    <h3>Harris, Parker</h3>
-    <p>Seniority: 20 yrs</p>
-    <p>Routes: 28K</p>
-    <p>KPIs: SPM: 6.9 | NDPPH: 16.8 | Ov/Un: -0.1</p>
   </div>
 </div>
 
