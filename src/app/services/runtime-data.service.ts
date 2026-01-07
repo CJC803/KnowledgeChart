@@ -34,9 +34,20 @@ export class RuntimeDataService {
   this.routesSubject.next(normalized);
 }
 
-  setDrivers(raw: any[]) {
-    console.log('RAW DRIVERS UPLOADED:', raw);
-    this.driversSubject.next(raw);
-  }
+  setDrivers(raw: any) {
+  console.log('RAW DRIVERS UPLOADED:', raw);
+  
+  // Handle both array and wrapped JSON formats
+  const driversArray = Array.isArray(raw) ? raw : (raw.drivers || []);
+  
+  const normalized = driversArray.map((d: any) => ({
+    name: d.name ?? d.DriverName ?? d.driver_name ?? 'Unknown',
+    // Add other fields you need to match your Driver component's expectations
+    performance: d.performance ?? d.Score ?? 0,
+    stops: d.stops ?? d.TotalStops ?? 0
+  }));
+
+  this.driversSubject.next(normalized);
+}
 }
 
