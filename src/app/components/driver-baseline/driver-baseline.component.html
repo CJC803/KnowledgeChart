@@ -18,7 +18,17 @@
 
 <div class="charts">
   <h3>Driver Comparison</h3>
-  <div class="chart-placeholder">[Bar Chart]</div>
+  <ngx-charts-bar-vertical
+    [results]="drivers"
+    [xAxis]="true"
+    [yAxis]="true"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    xAxisLabel="Driver"
+    yAxisLabel="Performance">
+  </ngx-charts-bar-vertical>
+</div>
 
   <h3>Performance Trendline</h3>
   <div class="chart-placeholder">[Trendline]</div>
