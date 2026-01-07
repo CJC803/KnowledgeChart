@@ -1,3 +1,5 @@
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -21,7 +23,9 @@ import { ComparisonStaffingComponent } from './components/comparison-staffing/co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule   // 👈 THIS WAS MISSING
+    HttpClientModule,   // 👈 THIS WAS MISSING
+    NgxChartsModule,           // 👈 Add this for charts
+    BrowserAnimationsModule     // 👈 Add this for chart animations
   ],
   providers: [],
   bootstrap: [AppComponent]
