@@ -31,8 +31,29 @@
 </div>
 
   <h3>Performance Trendline</h3>
-  <div class="chart-placeholder">[Trendline]</div>
+<div class="chart-container">
+  <ngx-charts-line-chart
+    [results]="driverTrendData"
+    [xAxis]="true"
+    [yAxis]="true"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    xAxisLabel="Date"
+    yAxisLabel="SPM">
+  </ngx-charts-line-chart>
+</div>
 
   <h3>Efficiency Scatter Plot</h3>
-  <div class="chart-placeholder">[Scatter Plot]</div>
+<div class="chart-container">
+  <ngx-charts-bubble-chart
+    [results]="efficiencyData"
+    [xAxis]="true"
+    [yAxis]="true"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    xAxisLabel="Total Miles"
+    yAxisLabel="Total Stops">
+  </ngx-charts-bubble-chart>
 </div>
