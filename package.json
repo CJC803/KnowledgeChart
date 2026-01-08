@@ -8,7 +8,11 @@
   },
   "dependencies": {
     "@angular/animations": "^17.3.0",
+    "@angular/cdk": "^17.3.0",
     "@swimlane/ngx-charts": "^20.5.0",
+    "d3-shape": "^3.2.0",
+    "d3-scale": "^4.0.2",
+    "d3-selection": "^3.0.0",
     "rxjs": "~7.8.0",
     "@angular/common": "^17.3.0",
     "@angular/compiler": "^17.3.0",
