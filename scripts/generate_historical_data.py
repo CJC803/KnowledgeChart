@@ -2,42 +2,53 @@ import json
 import random
 from datetime import datetime, timedelta
 
-# Configuration for your mock-up
-drivers = ["Alex P.", "Jordan M.", "Sam R.", "Taylor B."]
-routes = ["North-Loop", "Downtown-Exp", "West-Side", "Industrial-V1"]
+# Configuration based on your current drivers.json
+driver_configs = [
+    {"id": "D001", "first": "Marcus", "last": "Hill", "route": "R01"},
+    {"id": "D002", "first": "Anthony", "last": "Reed", "route": "R02"},
+    {"id": "D003", "first": "Derrick", "last": "Johnson", "route": "R03"}
+]
+
 days_to_generate = 30
+historical_stats = []
 
-historical_data = []
+# Generate data starting from Jan 6th to match your current logs
+start_date = datetime(2025, 1, 6)
 
-start_date = datetime.now() - timedelta(days=days_to_generate)
-
-for i in range(days_to_generate + 1):
-    current_date = start_date + timedelta(days=i)
-    day_of_week = current_date.strftime("%A")
+for config in driver_configs:
+    driver_entry = {
+        "driverId": config["id"],
+        "firstName": config["first"],
+        "lastName": config["last"],
+        "primaryRoute": config["route"],
+        "days": []
+    }
     
-    for driver in drivers:
-        for route in routes:
-            # Add some "logic" so trends look real
-            base_eff = 0.85
-            if day_of_week == "Friday": base_eff -= 0.1  # Fridays are slower
-            if route == "Downtown-Exp": base_eff -= 0.05 # Traffic heavy route
-            
-            efficiency = round(min(0.99, max(0.6, base_eff + random.uniform(-0.1, 0.1))), 2)
-            
-            historical_data.append({
-                "date": current_date.strftime("%Y-%m-%d"),
-                "dayOfWeek": day_of_week,
-                "driverName": driver,
-                "routeId": route,
-                "stats": {
-                    "efficiency": efficiency,
-                    "completedStops": random.randint(20, 45),
-                    "delayMinutes": random.randint(0, 60) if efficiency < 0.8 else 0
-                }
-            })
+    for i in range(days_to_generate):
+        current_date = start_date + timedelta(days=i)
+        
+        # Skip Sundays if you want a realistic work week
+        if current_date.weekday() == 6: continue
+        
+        stats = {
+            "date": current_date.strftime("%Y-%m-%d"),
+            "week": current_date.strftime("%G-W%V"),
+            "route": config["route"],
+            "avgSPM": round(random.uniform(6.0, 7.5), 1),
+            "avgNDPPH": round(random.uniform(14.0, 16.5), 1),
+            "avgMiles": random.randint(55, 75),
+            "avgStops": random.randint(85, 110),
+            "ovUn": round(random.uniform(-0.5, 0.5), 1),
+            "sporh": round(random.uniform(13.5, 15.5), 1),
+            "planDay": round(random.uniform(7.0, 7.5), 1),
+            "paidDay": round(random.uniform(7.0, 7.8), 1)
+        }
+        driver_entry["days"].append(stats)
+    
+    historical_stats.append(driver_entry)
 
-# Save it where Angular can see it
+# Save to your assets folder
 with open('../src/assets/mock-data/historical-stats.json', 'w') as f:
-    json.dump(historical_data, f, indent=2)
+    json.dump(historical_stats, f, indent=2)
 
-print(f"Generated {len(historical_data)} data points in assets folder.")
+print("Historical data successfully generated with matched schema.")
