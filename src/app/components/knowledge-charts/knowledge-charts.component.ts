@@ -8,32 +8,29 @@ import { MockDataService } from '../../services/mock-data.service';
   styleUrls: ['./knowledge-charts.component.css']
 })
 export class KnowledgeChartsComponent {
-
   private routesFile: any[] = [];
   private driversFile: any[] = [];
+  private historicalFile: any[] = []; // Moved this out of the constructor
 
   constructor(
     private runtimeData: RuntimeDataService,
     private mockData: MockDataService
-    // Add this near line 13
-    private historicalFile: any[] = [];
   ) {}
 
   // --- Option C: one-click sample load ---
   loadSampleData() {
-  this.mockData.loadAll().subscribe(({ routes, drivers, historical }) => {
-    this.ingestRoutes(routes);
-    this.ingestDrivers(drivers);
-    this.historicalFile = historical; // Store the new historical data
-    this.loadData();
-  });
-}
+    this.mockData.loadAll().subscribe(({ routes, drivers, historical }) => {
+      this.ingestRoutes(routes);
+      this.ingestDrivers(drivers);
+      this.historicalFile = historical;
+      this.loadData();
+    });
+  }
 
-  // --- Upload handlers (kept) ---
+  // --- Upload handlers ---
   onRoutesUpload(event: any) {
     const file = event.target.files?.[0];
     if (!file) return;
-
     const reader = new FileReader();
     reader.onload = () => {
       const parsed = JSON.parse(reader.result as string);
@@ -46,7 +43,6 @@ export class KnowledgeChartsComponent {
   onDriversUpload(event: any) {
     const file = event.target.files?.[0];
     if (!file) return;
-
     const reader = new FileReader();
     reader.onload = () => {
       const parsed = JSON.parse(reader.result as string);
@@ -56,7 +52,6 @@ export class KnowledgeChartsComponent {
     reader.readAsText(file);
   }
 
-  // --- Shared ingestion (single source of truth) ---
   private ingestRoutes(routes: any[]) {
     this.routesFile = Array.isArray(routes) ? routes : [];
   }
@@ -65,16 +60,8 @@ export class KnowledgeChartsComponent {
     this.driversFile = Array.isArray(drivers) ? drivers : [];
   }
 
-  // --- Existing pipeline (unchanged logic, just safer) ---
   loadData() {
-    // ... existing validation and route normalization logic ...
-  
-    this.runtimeData.setRoutes(normalizedRoutes);
-    this.runtimeData.setDrivers(this.driversFile);
-    
-    // ADD THIS LINE:
-    this.runtimeData.setHistoricalData(this.historicalFile);
-}
+    if (!this.routesFile.length) return;
 
     const normalizedRoutes = this.routesFile.map(r => ({
       route: r.route ?? r.Route,
@@ -90,5 +77,6 @@ export class KnowledgeChartsComponent {
 
     this.runtimeData.setRoutes(normalizedRoutes);
     this.runtimeData.setDrivers(this.driversFile);
+    this.runtimeData.setHistoricalData(this.historicalFile);
   }
 }
