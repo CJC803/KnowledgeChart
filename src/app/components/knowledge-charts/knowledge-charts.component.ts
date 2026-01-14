@@ -15,22 +15,19 @@ export class KnowledgeChartsComponent {
   constructor(
     private runtimeData: RuntimeDataService,
     private mockData: MockDataService
+    // Add this near line 13
+    private historicalFile: any[] = [];
   ) {}
 
   // --- Option C: one-click sample load ---
   loadSampleData() {
-    this.mockData.loadAll().subscribe(({ routes, drivers }) => {
-      console.log('Sample routes loaded:', routes.length);
-      console.log('Sample drivers loaded:', drivers.length);
-
-      this.ingestRoutes(routes);
-      this.ingestDrivers(drivers);
-
-      // If your UI expects a separate "Load" click, you can skip this
-      // and let users hit the normal Load button.
-      this.loadData();
-    });
-  }
+  this.mockData.loadAll().subscribe(({ routes, drivers, historical }) => {
+    this.ingestRoutes(routes);
+    this.ingestDrivers(drivers);
+    this.historicalFile = historical; // Store the new historical data
+    this.loadData();
+  });
+}
 
   // --- Upload handlers (kept) ---
   onRoutesUpload(event: any) {
@@ -70,10 +67,14 @@ export class KnowledgeChartsComponent {
 
   // --- Existing pipeline (unchanged logic, just safer) ---
   loadData() {
-    if (!this.routesFile?.length || !this.driversFile?.length) {
-      console.warn('No routes/drivers loaded yet.');
-      return;
-    }
+    // ... existing validation and route normalization logic ...
+  
+    this.runtimeData.setRoutes(normalizedRoutes);
+    this.runtimeData.setDrivers(this.driversFile);
+    
+    // ADD THIS LINE:
+    this.runtimeData.setHistoricalData(this.historicalFile);
+}
 
     const normalizedRoutes = this.routesFile.map(r => ({
       route: r.route ?? r.Route,
